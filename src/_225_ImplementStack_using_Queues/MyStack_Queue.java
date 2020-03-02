@@ -19,7 +19,7 @@ class MyStack_Queue {
     /** Push element x onto stack. */
     public void push(int x) {
         queue.add(x);
-        while (queue.peek() != x) {
+        for (int i = 0; i < queue.size() - 1; i++) {
             queue.add(queue.poll());
         }
     }
