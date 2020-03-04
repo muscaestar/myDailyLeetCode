@@ -11,7 +11,7 @@ import static org.junit.Assert.assertTrue;
  *
  * @author muscaestar
  */
-public class MyStackTest {
+public class _225Test {
 
     @Before
     public void setUp() throws Exception {
