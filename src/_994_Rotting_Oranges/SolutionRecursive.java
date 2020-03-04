@@ -16,15 +16,20 @@ public class SolutionRecursive implements Solution {
         this.numRow = grid.length;
         this.numCol = grid[0].length;
 
-        for (int i = 0; i < numRow; i++)
-            for (int j = 0; j < numCol; j++)
-                if (grid[i][j] == 2)
+        for (int i = 0; i < numRow; i++) {
+            for (int j = 0; j < numCol; j++) {
+                if (grid[i][j] == 2) {
                     dfs(i, j, 2);
+                }
+            }
+        }
 
         int res = 0;
         for (int i = 0; i < numRow; i++) {
             for (int j = 0; j < numCol; j++) {
-                if (grid[i][j] == 1) return -1;
+                if (grid[i][j] == 1) {
+                    return -1;
+                }
                 res = Math.max(res, grid[i][j]);
             }
         }
